@@ -16,6 +16,7 @@
     "format": "prettier --write '**/*.{js,md,scss,ts}' '!**/{build,es,lib,storybook,ts,umd}/**'",
     "format:diff": "prettier --list-different '**/*.{js,md,scss,ts}' '!**/{build,es,lib,storybook,ts,umd}/**'",
     "lint": "eslint . --ext .ts",
+    "test": "jest",
     "tsc": "tsc",
     "watch": "yarn clean && rollup -c -w"
   },
