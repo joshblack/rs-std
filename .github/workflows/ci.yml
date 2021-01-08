@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
       - name: Run Tests
-        run: yarn test
+        run: yarn test --ci
 
   typecheck:
     runs-on: ubuntu-latest
