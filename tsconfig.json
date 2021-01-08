@@ -1,0 +1,32 @@
+{
+  "include": ["src/**/*"],
+
+  "compilerOptions": {
+    // Project Options
+    "lib": ["es2015", "es2016", "es2017", "es2018", "es2019", "dom"],
+    "rootDir": "./src",
+    "noEmit": true,
+    "declaration": true,
+
+    /* "declarationMap": true, */
+    /* "emitDeclarationOnly": true */
+
+    // Strict checks
+    "strict": true,
+
+    // Linter checks
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // Module resolution
+    "esModuleInterop": true,
+    "types": [],
+
+    // Advanced
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}
