@@ -1,4 +1,4 @@
-name: JavaScript
+name: CI
 on:
   pull_request:
     branches:
@@ -11,7 +11,7 @@ jobs:
       - name: Use Node.js 14.x
         uses: actions/setup-node@v2.1.4
         with:
-          node-version: "14.x"
+          node-version: '14.x'
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
       - name: Format project files
@@ -24,8 +24,21 @@ jobs:
       - name: Use Node.js 14.x
         uses: actions/setup-node@v2.1.4
         with:
-          node-version: "14.x"
+          node-version: '14.x'
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
       - name: Lint JavaScript files
         run: yarn lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+      - name: Run TypeScript
+        run: yarn tsc
